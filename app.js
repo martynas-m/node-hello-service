@@ -1,14 +1,3 @@
 const {get, post} = require ('./lib/apify');
+const users = require('./users/users_api');
 
-
-get('/hello', params => {
-  return Promise.resolve([200, {result: 'hello, my dear friend!', params}]);
-});
-
-get('/', params => {
-  return Promise.resolve([200, {result: 'try /hello', params}]);
-});
-
-post('/api/data', params => {
-  return Promise.resolve([200, {result: 'ok', params}]);
-});
