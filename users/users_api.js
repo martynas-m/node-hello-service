@@ -19,11 +19,27 @@ post('/api/users', user => storage
 get('/api/users', params => storage
   .read('users', params.name)
   .then(user => [200, user])
+  .catch( e => {
+    return [e.code === 'ENOENT' ? 404 : 500, {}];
+  })
 );
 
-del('api/users', params => storage
+put('/api/users', user => storage
+  .read('users', user.name)
+  .then( existingUser => Object.assign(existingUser, user))
+  .then( newData => storage.update('users', user.name, newData))
+  .then( () => [200, null])
+  .catch( e => {
+    return [e.code === 'ENOENT' ? 404 : 500, {}];
+  })
+);
+
+del('/api/users', params => storage
   .delete('users', params.name)
   .then(() => [200, {}])
+  .catch( e => {
+    return [e.code === 'ENOENT' ? 404 : 500, {}];
+  })
 );
 
 logger.info('started.');
