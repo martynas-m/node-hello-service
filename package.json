@@ -1,0 +1,22 @@
+{
+  "name": "homework",
+  "version": "1.0.0",
+  "description": "nodejs master class homeworks",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martynas-m/node-hello-service.git"
+  },
+  "author": "martynas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martynas-m/node-hello-service/issues"
+  },
+  "homepage": "https://github.com/martynas-m/node-hello-service#readme"
+}

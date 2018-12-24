@@ -2,7 +2,7 @@ const path = require('path');
 const {get, post, put, del} = require ('../lib/apify');
 const Storage = require('../lib/storage');
 const Logger = require ('../lib/logger');
-const logger = new Logger("users api");
+const logger = new Logger('users api');
 
 const dataDir = path.join(__dirname,'../.data');
 const storage = new Storage(dataDir);
