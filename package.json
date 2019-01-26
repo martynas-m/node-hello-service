@@ -18,5 +18,6 @@
   "bugs": {
     "url": "https://github.com/martynas-m/node-hello-service/issues"
   },
-  "homepage": "https://github.com/martynas-m/node-hello-service#readme"
+  "homepage": "https://github.com/martynas-m/node-hello-service#readme",
+  "dependencies": {}
 }
